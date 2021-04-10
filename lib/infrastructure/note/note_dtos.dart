@@ -51,6 +51,7 @@ abstract class NoteDto implements _$NoteDto {
       NoteDto.fromJson(doc.data).copyWith(id: doc.documentID);
 }
 
+//? watch ddd part 14 to watch again
 class ServerTimestampConverter implements JsonConverter<FieldValue, Object> {
   const ServerTimestampConverter();
 
