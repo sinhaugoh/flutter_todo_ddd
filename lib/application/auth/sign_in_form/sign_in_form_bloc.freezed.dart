@@ -7,51 +7,7 @@ part of 'sign_in_form_bloc.dart';
 // FreezedGenerator
 // **************************************************************************
 
-mixin _$SignInFormEvent {
-  @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result emailChanged(String emailStr),
-    @required Result passwordChanged(String pwStr),
-    @required Result registerWithEmailAndPasswordPressed(),
-    @required Result signInWithEmailAndPasswordPressed(),
-    @required Result signInWithGooglePressed(),
-  });
-
-  @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result emailChanged(String emailStr),
-    Result passwordChanged(String pwStr),
-    Result registerWithEmailAndPasswordPressed(),
-    Result signInWithEmailAndPasswordPressed(),
-    Result signInWithGooglePressed(),
-    @required Result orElse(),
-  });
-
-  @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result emailChanged(EmailChange value),
-    @required Result passwordChanged(PasswordChange value),
-    @required
-        Result registerWithEmailAndPasswordPressed(
-            RegisterWithEmailAndPasswordPressed value),
-    @required
-        Result signInWithEmailAndPasswordPressed(
-            SignInWithEmailAndPasswordPressed value),
-    @required Result signInWithGooglePressed(SignInWithGooglePressed value),
-  });
-
-  @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result emailChanged(EmailChange value),
-    Result passwordChanged(PasswordChange value),
-    Result registerWithEmailAndPasswordPressed(
-        RegisterWithEmailAndPasswordPressed value),
-    Result signInWithEmailAndPasswordPressed(
-        SignInWithEmailAndPasswordPressed value),
-    Result signInWithGooglePressed(SignInWithGooglePressed value),
-    @required Result orElse(),
-  });
-}
+T _$identity<T>(T value) => value;
 
 class _$SignInFormEventTearOff {
   const _$SignInFormEventTearOff();
@@ -81,7 +37,93 @@ class _$SignInFormEventTearOff {
   }
 }
 
+// ignore: unused_element
 const $SignInFormEvent = _$SignInFormEventTearOff();
+
+mixin _$SignInFormEvent {
+  @optionalTypeArgs
+  Result when<Result extends Object>({
+    @required Result emailChanged(String emailStr),
+    @required Result passwordChanged(String pwStr),
+    @required Result registerWithEmailAndPasswordPressed(),
+    @required Result signInWithEmailAndPasswordPressed(),
+    @required Result signInWithGooglePressed(),
+  });
+  @optionalTypeArgs
+  Result maybeWhen<Result extends Object>({
+    Result emailChanged(String emailStr),
+    Result passwordChanged(String pwStr),
+    Result registerWithEmailAndPasswordPressed(),
+    Result signInWithEmailAndPasswordPressed(),
+    Result signInWithGooglePressed(),
+    @required Result orElse(),
+  });
+  @optionalTypeArgs
+  Result map<Result extends Object>({
+    @required Result emailChanged(EmailChange value),
+    @required Result passwordChanged(PasswordChange value),
+    @required
+        Result registerWithEmailAndPasswordPressed(
+            RegisterWithEmailAndPasswordPressed value),
+    @required
+        Result signInWithEmailAndPasswordPressed(
+            SignInWithEmailAndPasswordPressed value),
+    @required Result signInWithGooglePressed(SignInWithGooglePressed value),
+  });
+  @optionalTypeArgs
+  Result maybeMap<Result extends Object>({
+    Result emailChanged(EmailChange value),
+    Result passwordChanged(PasswordChange value),
+    Result registerWithEmailAndPasswordPressed(
+        RegisterWithEmailAndPasswordPressed value),
+    Result signInWithEmailAndPasswordPressed(
+        SignInWithEmailAndPasswordPressed value),
+    Result signInWithGooglePressed(SignInWithGooglePressed value),
+    @required Result orElse(),
+  });
+}
+
+abstract class $SignInFormEventCopyWith<$Res> {
+  factory $SignInFormEventCopyWith(
+          SignInFormEvent value, $Res Function(SignInFormEvent) then) =
+      _$SignInFormEventCopyWithImpl<$Res>;
+}
+
+class _$SignInFormEventCopyWithImpl<$Res>
+    implements $SignInFormEventCopyWith<$Res> {
+  _$SignInFormEventCopyWithImpl(this._value, this._then);
+
+  final SignInFormEvent _value;
+  // ignore: unused_field
+  final $Res Function(SignInFormEvent) _then;
+}
+
+abstract class $EmailChangeCopyWith<$Res> {
+  factory $EmailChangeCopyWith(
+          EmailChange value, $Res Function(EmailChange) then) =
+      _$EmailChangeCopyWithImpl<$Res>;
+  $Res call({String emailStr});
+}
+
+class _$EmailChangeCopyWithImpl<$Res>
+    extends _$SignInFormEventCopyWithImpl<$Res>
+    implements $EmailChangeCopyWith<$Res> {
+  _$EmailChangeCopyWithImpl(
+      EmailChange _value, $Res Function(EmailChange) _then)
+      : super(_value, (v) => _then(v as EmailChange));
+
+  @override
+  EmailChange get _value => super._value as EmailChange;
+
+  @override
+  $Res call({
+    Object emailStr = freezed,
+  }) {
+    return _then(EmailChange(
+      emailStr == freezed ? _value.emailStr : emailStr as String,
+    ));
+  }
+}
 
 class _$EmailChange implements EmailChange {
   const _$EmailChange(this.emailStr) : assert(emailStr != null);
@@ -108,13 +150,8 @@ class _$EmailChange implements EmailChange {
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(emailStr);
 
   @override
-  _$EmailChange copyWith({
-    Object emailStr = freezed,
-  }) {
-    return _$EmailChange(
-      emailStr == freezed ? this.emailStr : emailStr as String,
-    );
-  }
+  $EmailChangeCopyWith<EmailChange> get copyWith =>
+      _$EmailChangeCopyWithImpl<EmailChange>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -195,8 +232,34 @@ abstract class EmailChange implements SignInFormEvent {
   const factory EmailChange(String emailStr) = _$EmailChange;
 
   String get emailStr;
+  $EmailChangeCopyWith<EmailChange> get copyWith;
+}
 
-  EmailChange copyWith({String emailStr});
+abstract class $PasswordChangeCopyWith<$Res> {
+  factory $PasswordChangeCopyWith(
+          PasswordChange value, $Res Function(PasswordChange) then) =
+      _$PasswordChangeCopyWithImpl<$Res>;
+  $Res call({String pwStr});
+}
+
+class _$PasswordChangeCopyWithImpl<$Res>
+    extends _$SignInFormEventCopyWithImpl<$Res>
+    implements $PasswordChangeCopyWith<$Res> {
+  _$PasswordChangeCopyWithImpl(
+      PasswordChange _value, $Res Function(PasswordChange) _then)
+      : super(_value, (v) => _then(v as PasswordChange));
+
+  @override
+  PasswordChange get _value => super._value as PasswordChange;
+
+  @override
+  $Res call({
+    Object pwStr = freezed,
+  }) {
+    return _then(PasswordChange(
+      pwStr == freezed ? _value.pwStr : pwStr as String,
+    ));
+  }
 }
 
 class _$PasswordChange implements PasswordChange {
@@ -223,13 +286,8 @@ class _$PasswordChange implements PasswordChange {
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(pwStr);
 
   @override
-  _$PasswordChange copyWith({
-    Object pwStr = freezed,
-  }) {
-    return _$PasswordChange(
-      pwStr == freezed ? this.pwStr : pwStr as String,
-    );
-  }
+  $PasswordChangeCopyWith<PasswordChange> get copyWith =>
+      _$PasswordChangeCopyWithImpl<PasswordChange>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -310,8 +368,27 @@ abstract class PasswordChange implements SignInFormEvent {
   const factory PasswordChange(String pwStr) = _$PasswordChange;
 
   String get pwStr;
+  $PasswordChangeCopyWith<PasswordChange> get copyWith;
+}
 
-  PasswordChange copyWith({String pwStr});
+abstract class $RegisterWithEmailAndPasswordPressedCopyWith<$Res> {
+  factory $RegisterWithEmailAndPasswordPressedCopyWith(
+          RegisterWithEmailAndPasswordPressed value,
+          $Res Function(RegisterWithEmailAndPasswordPressed) then) =
+      _$RegisterWithEmailAndPasswordPressedCopyWithImpl<$Res>;
+}
+
+class _$RegisterWithEmailAndPasswordPressedCopyWithImpl<$Res>
+    extends _$SignInFormEventCopyWithImpl<$Res>
+    implements $RegisterWithEmailAndPasswordPressedCopyWith<$Res> {
+  _$RegisterWithEmailAndPasswordPressedCopyWithImpl(
+      RegisterWithEmailAndPasswordPressed _value,
+      $Res Function(RegisterWithEmailAndPasswordPressed) _then)
+      : super(_value, (v) => _then(v as RegisterWithEmailAndPasswordPressed));
+
+  @override
+  RegisterWithEmailAndPasswordPressed get _value =>
+      super._value as RegisterWithEmailAndPasswordPressed;
 }
 
 class _$RegisterWithEmailAndPasswordPressed
@@ -412,6 +489,26 @@ abstract class RegisterWithEmailAndPasswordPressed implements SignInFormEvent {
       _$RegisterWithEmailAndPasswordPressed;
 }
 
+abstract class $SignInWithEmailAndPasswordPressedCopyWith<$Res> {
+  factory $SignInWithEmailAndPasswordPressedCopyWith(
+          SignInWithEmailAndPasswordPressed value,
+          $Res Function(SignInWithEmailAndPasswordPressed) then) =
+      _$SignInWithEmailAndPasswordPressedCopyWithImpl<$Res>;
+}
+
+class _$SignInWithEmailAndPasswordPressedCopyWithImpl<$Res>
+    extends _$SignInFormEventCopyWithImpl<$Res>
+    implements $SignInWithEmailAndPasswordPressedCopyWith<$Res> {
+  _$SignInWithEmailAndPasswordPressedCopyWithImpl(
+      SignInWithEmailAndPasswordPressed _value,
+      $Res Function(SignInWithEmailAndPasswordPressed) _then)
+      : super(_value, (v) => _then(v as SignInWithEmailAndPasswordPressed));
+
+  @override
+  SignInWithEmailAndPasswordPressed get _value =>
+      super._value as SignInWithEmailAndPasswordPressed;
+}
+
 class _$SignInWithEmailAndPasswordPressed
     implements SignInWithEmailAndPasswordPressed {
   const _$SignInWithEmailAndPasswordPressed();
@@ -510,6 +607,23 @@ abstract class SignInWithEmailAndPasswordPressed implements SignInFormEvent {
       _$SignInWithEmailAndPasswordPressed;
 }
 
+abstract class $SignInWithGooglePressedCopyWith<$Res> {
+  factory $SignInWithGooglePressedCopyWith(SignInWithGooglePressed value,
+          $Res Function(SignInWithGooglePressed) then) =
+      _$SignInWithGooglePressedCopyWithImpl<$Res>;
+}
+
+class _$SignInWithGooglePressedCopyWithImpl<$Res>
+    extends _$SignInFormEventCopyWithImpl<$Res>
+    implements $SignInWithGooglePressedCopyWith<$Res> {
+  _$SignInWithGooglePressedCopyWithImpl(SignInWithGooglePressed _value,
+      $Res Function(SignInWithGooglePressed) _then)
+      : super(_value, (v) => _then(v as SignInWithGooglePressed));
+
+  @override
+  SignInWithGooglePressed get _value => super._value as SignInWithGooglePressed;
+}
+
 class _$SignInWithGooglePressed implements SignInWithGooglePressed {
   const _$SignInWithGooglePressed();
 
@@ -605,21 +719,6 @@ abstract class SignInWithGooglePressed implements SignInFormEvent {
   const factory SignInWithGooglePressed() = _$SignInWithGooglePressed;
 }
 
-mixin _$SignInFormState {
-  EmailAddress get emailAddress;
-  Password get password;
-  bool get showErrorMessage;
-  bool get isSubmitting;
-  Option<Either<AuthFailure, Unit>> get authFailureOrSuccessOption;
-
-  SignInFormState copyWith(
-      {EmailAddress emailAddress,
-      Password password,
-      bool showErrorMessage,
-      bool isSubmitting,
-      Option<Either<AuthFailure, Unit>> authFailureOrSuccessOption});
-}
-
 class _$SignInFormStateTearOff {
   const _$SignInFormStateTearOff();
 
@@ -639,7 +738,112 @@ class _$SignInFormStateTearOff {
   }
 }
 
+// ignore: unused_element
 const $SignInFormState = _$SignInFormStateTearOff();
+
+mixin _$SignInFormState {
+  EmailAddress get emailAddress;
+  Password get password;
+  bool get showErrorMessage;
+  bool get isSubmitting;
+  Option<Either<AuthFailure, Unit>> get authFailureOrSuccessOption;
+
+  $SignInFormStateCopyWith<SignInFormState> get copyWith;
+}
+
+abstract class $SignInFormStateCopyWith<$Res> {
+  factory $SignInFormStateCopyWith(
+          SignInFormState value, $Res Function(SignInFormState) then) =
+      _$SignInFormStateCopyWithImpl<$Res>;
+  $Res call(
+      {EmailAddress emailAddress,
+      Password password,
+      bool showErrorMessage,
+      bool isSubmitting,
+      Option<Either<AuthFailure, Unit>> authFailureOrSuccessOption});
+}
+
+class _$SignInFormStateCopyWithImpl<$Res>
+    implements $SignInFormStateCopyWith<$Res> {
+  _$SignInFormStateCopyWithImpl(this._value, this._then);
+
+  final SignInFormState _value;
+  // ignore: unused_field
+  final $Res Function(SignInFormState) _then;
+
+  @override
+  $Res call({
+    Object emailAddress = freezed,
+    Object password = freezed,
+    Object showErrorMessage = freezed,
+    Object isSubmitting = freezed,
+    Object authFailureOrSuccessOption = freezed,
+  }) {
+    return _then(_value.copyWith(
+      emailAddress: emailAddress == freezed
+          ? _value.emailAddress
+          : emailAddress as EmailAddress,
+      password: password == freezed ? _value.password : password as Password,
+      showErrorMessage: showErrorMessage == freezed
+          ? _value.showErrorMessage
+          : showErrorMessage as bool,
+      isSubmitting:
+          isSubmitting == freezed ? _value.isSubmitting : isSubmitting as bool,
+      authFailureOrSuccessOption: authFailureOrSuccessOption == freezed
+          ? _value.authFailureOrSuccessOption
+          : authFailureOrSuccessOption as Option<Either<AuthFailure, Unit>>,
+    ));
+  }
+}
+
+abstract class _$SignInFormStateCopyWith<$Res>
+    implements $SignInFormStateCopyWith<$Res> {
+  factory _$SignInFormStateCopyWith(
+          _SignInFormState value, $Res Function(_SignInFormState) then) =
+      __$SignInFormStateCopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {EmailAddress emailAddress,
+      Password password,
+      bool showErrorMessage,
+      bool isSubmitting,
+      Option<Either<AuthFailure, Unit>> authFailureOrSuccessOption});
+}
+
+class __$SignInFormStateCopyWithImpl<$Res>
+    extends _$SignInFormStateCopyWithImpl<$Res>
+    implements _$SignInFormStateCopyWith<$Res> {
+  __$SignInFormStateCopyWithImpl(
+      _SignInFormState _value, $Res Function(_SignInFormState) _then)
+      : super(_value, (v) => _then(v as _SignInFormState));
+
+  @override
+  _SignInFormState get _value => super._value as _SignInFormState;
+
+  @override
+  $Res call({
+    Object emailAddress = freezed,
+    Object password = freezed,
+    Object showErrorMessage = freezed,
+    Object isSubmitting = freezed,
+    Object authFailureOrSuccessOption = freezed,
+  }) {
+    return _then(_SignInFormState(
+      emailAddress: emailAddress == freezed
+          ? _value.emailAddress
+          : emailAddress as EmailAddress,
+      password: password == freezed ? _value.password : password as Password,
+      showErrorMessage: showErrorMessage == freezed
+          ? _value.showErrorMessage
+          : showErrorMessage as bool,
+      isSubmitting:
+          isSubmitting == freezed ? _value.isSubmitting : isSubmitting as bool,
+      authFailureOrSuccessOption: authFailureOrSuccessOption == freezed
+          ? _value.authFailureOrSuccessOption
+          : authFailureOrSuccessOption as Option<Either<AuthFailure, Unit>>,
+    ));
+  }
+}
 
 class _$_SignInFormState implements _SignInFormState {
   const _$_SignInFormState(
@@ -703,28 +907,8 @@ class _$_SignInFormState implements _SignInFormState {
       const DeepCollectionEquality().hash(authFailureOrSuccessOption);
 
   @override
-  _$_SignInFormState copyWith({
-    Object emailAddress = freezed,
-    Object password = freezed,
-    Object showErrorMessage = freezed,
-    Object isSubmitting = freezed,
-    Object authFailureOrSuccessOption = freezed,
-  }) {
-    return _$_SignInFormState(
-      emailAddress: emailAddress == freezed
-          ? this.emailAddress
-          : emailAddress as EmailAddress,
-      password: password == freezed ? this.password : password as Password,
-      showErrorMessage: showErrorMessage == freezed
-          ? this.showErrorMessage
-          : showErrorMessage as bool,
-      isSubmitting:
-          isSubmitting == freezed ? this.isSubmitting : isSubmitting as bool,
-      authFailureOrSuccessOption: authFailureOrSuccessOption == freezed
-          ? this.authFailureOrSuccessOption
-          : authFailureOrSuccessOption as Option<Either<AuthFailure, Unit>>,
-    );
-  }
+  _$SignInFormStateCopyWith<_SignInFormState> get copyWith =>
+      __$SignInFormStateCopyWithImpl<_SignInFormState>(this, _$identity);
 }
 
 abstract class _SignInFormState implements SignInFormState {
@@ -751,12 +935,6 @@ abstract class _SignInFormState implements SignInFormState {
   bool get isSubmitting;
   @override
   Option<Either<AuthFailure, Unit>> get authFailureOrSuccessOption;
-
   @override
-  _SignInFormState copyWith(
-      {EmailAddress emailAddress,
-      Password password,
-      bool showErrorMessage,
-      bool isSubmitting,
-      Option<Either<AuthFailure, Unit>> authFailureOrSuccessOption});
+  _$SignInFormStateCopyWith<_SignInFormState> get copyWith;
 }

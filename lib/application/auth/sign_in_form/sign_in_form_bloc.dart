@@ -5,6 +5,7 @@ import 'package:dartz/dartz.dart';
 import 'package:flutter_todo_ddd/domain/auth/auth_failure.dart';
 import 'package:flutter_todo_ddd/domain/auth/i_auth_facade.dart';
 import 'package:flutter_todo_ddd/domain/auth/value_objects.dart';
+import 'package:injectable/injectable.dart';
 import 'package:meta/meta.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
@@ -14,6 +15,7 @@ part 'sign_in_form_state.dart';
 
 part 'sign_in_form_bloc.freezed.dart';
 
+@injectable
 class SignInFormBloc extends Bloc<SignInFormEvent, SignInFormState> {
   final IAuthFacade _authFacade;
 
@@ -83,6 +85,7 @@ class SignInFormBloc extends Bloc<SignInFormEvent, SignInFormState> {
     yield state.copyWith(
       isSubmitting: false,
       showErrorMessage: true,
+      //optionOf - could be none() or Either<AuthFailure, Unit>
       authFailureOrSuccessOption: optionOf(failureOrSuccess),
     );
   }
