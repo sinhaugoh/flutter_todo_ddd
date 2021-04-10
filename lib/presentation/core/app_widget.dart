@@ -4,7 +4,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_todo_ddd/application/auth/auth_bloc.dart';
 import 'package:flutter_todo_ddd/injection.dart';
 import 'package:flutter_todo_ddd/presentation/routes/router.gr.dart';
-import 'package:flutter_todo_ddd/presentation/sign_in/sign_in_page.dart';
 
 class AppWidget extends StatelessWidget {
   @override
@@ -23,7 +22,7 @@ class AppWidget extends StatelessWidget {
           ),
         ),
         debugShowCheckedModeBanner: false,
-        builder: ExtendedNavigator(router: Router(),),
+        builder: ExtendedNavigator(router: Routerr(),),
       ),
     );
   }

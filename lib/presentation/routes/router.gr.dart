@@ -19,13 +19,13 @@ abstract class Routes {
   };
 }
 
-class Router extends RouterBase {
+class Routerr extends RouterBase {
   @override
   Set<String> get allRoutes => Routes.all;
 
   @Deprecated('call ExtendedNavigator.ofRouter<Router>() directly')
   static ExtendedNavigatorState get navigator =>
-      ExtendedNavigator.ofRouter<Router>();
+      ExtendedNavigator.ofRouter<Routerr>();
 
   @override
   Route<dynamic> onGenerateRoute(RouteSettings settings) {
@@ -50,7 +50,7 @@ class Router extends RouterBase {
 // Navigation helper methods extension
 // **************************************************************************
 
-extension RouterNavigationHelperMethods on ExtendedNavigatorState {
+extension RouterrNavigationHelperMethods on ExtendedNavigatorState {
   Future pushSplashPage() => pushNamed(Routes.splashPage);
 
   Future pushSignInPage() => pushNamed(Routes.signInPage);
