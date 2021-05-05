@@ -791,6 +791,8 @@ abstract class _$LoadFailureCopyWith<$Res> {
           _LoadFailure value, $Res Function(_LoadFailure) then) =
       __$LoadFailureCopyWithImpl<$Res>;
   $Res call({NoteFailure noteFailure});
+
+  $NoteFailureCopyWith<$Res> get noteFailure;
 }
 
 class __$LoadFailureCopyWithImpl<$Res>
@@ -810,6 +812,16 @@ class __$LoadFailureCopyWithImpl<$Res>
     return _then(_LoadFailure(
       noteFailure == freezed ? _value.noteFailure : noteFailure as NoteFailure,
     ));
+  }
+
+  @override
+  $NoteFailureCopyWith<$Res> get noteFailure {
+    if (_value.noteFailure == null) {
+      return null;
+    }
+    return $NoteFailureCopyWith<$Res>(_value.noteFailure, (value) {
+      return _then(_value.copyWith(noteFailure: value));
+    });
   }
 }
 

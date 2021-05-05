@@ -406,6 +406,8 @@ abstract class _$DeleteFailureCopyWith<$Res> {
           _DeleteFailure value, $Res Function(_DeleteFailure) then) =
       __$DeleteFailureCopyWithImpl<$Res>;
   $Res call({NoteFailure noteFailure});
+
+  $NoteFailureCopyWith<$Res> get noteFailure;
 }
 
 class __$DeleteFailureCopyWithImpl<$Res>
@@ -425,6 +427,16 @@ class __$DeleteFailureCopyWithImpl<$Res>
     return _then(_DeleteFailure(
       noteFailure == freezed ? _value.noteFailure : noteFailure as NoteFailure,
     ));
+  }
+
+  @override
+  $NoteFailureCopyWith<$Res> get noteFailure {
+    if (_value.noteFailure == null) {
+      return null;
+    }
+    return $NoteFailureCopyWith<$Res>(_value.noteFailure, (value) {
+      return _then(_value.copyWith(noteFailure: value));
+    });
   }
 }
 
