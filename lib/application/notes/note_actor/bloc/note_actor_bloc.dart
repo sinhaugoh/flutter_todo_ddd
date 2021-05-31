@@ -14,7 +14,7 @@ part 'note_actor_bloc.freezed.dart';
 @injectable
 class NoteActorBloc extends Bloc<NoteActorEvent, NoteActorState> {
   final INoteRepository _noteRepository;
-  NoteActorBloc(this._noteRepository);
+  NoteActorBloc(this._noteRepository) : super(const NoteActorState.initial());
 
   @override
   Stream<NoteActorState> mapEventToState(
@@ -28,7 +28,4 @@ class NoteActorBloc extends Bloc<NoteActorEvent, NoteActorState> {
       (_) => const NoteActorState.deleteSuccess(),
     );
   }
-
-  @override
-  NoteActorState get initialState => const NoteActorState.initial();
 }

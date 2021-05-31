@@ -16,7 +16,7 @@ part 'auth_bloc.freezed.dart';
 class AuthBloc extends Bloc<AuthEvent, AuthState> {
   final IAuthFacade _authFacade;
 
-  AuthBloc(this._authFacade);
+  AuthBloc(this._authFacade) : super(const AuthState.initial());
 
   @override
   Stream<AuthState> mapEventToState(
@@ -37,6 +37,4 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
     );
   }
 
-  @override
-  AuthState get initialState => const AuthState.initial();
 }
