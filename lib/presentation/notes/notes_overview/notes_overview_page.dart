@@ -28,7 +28,7 @@ class NotesOverviewPage extends StatelessWidget {
           BlocListener<AuthBloc, AuthState>(listener: (context, state) {
             state.maybeMap(
                 unauthenticated: (_) =>
-                    ExtendedNavigator.of(context).push(Routes.signInPage),
+                    ExtendedNavigator.of(context).replace(Routes.signInPage),
                 orElse: () {});
           }),
           BlocListener<NoteActorBloc, NoteActorState>(
@@ -63,7 +63,7 @@ class NotesOverviewPage extends StatelessWidget {
           ),
           floatingActionButton: FloatingActionButton(
             onPressed: () {
-              //TODO: Navigate to note_form_page
+              ExtendedNavigator.of(context).pushNoteFormPage(editedNote: null);
             },
             child: const Icon(Icons.add),
           ),
