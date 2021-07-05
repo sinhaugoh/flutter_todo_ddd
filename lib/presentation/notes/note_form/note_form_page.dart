@@ -6,6 +6,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_todo_ddd/application/notes/note_form/note_form_bloc.dart';
 import 'package:flutter_todo_ddd/domain/notes/note.dart';
 import 'package:flutter_todo_ddd/injection.dart';
+import 'package:flutter_todo_ddd/presentation/notes/note_form/widgets/body_field_widget.dart';
 import 'package:flutter_todo_ddd/presentation/routes/router.gr.dart';
 
 class NoteFormPage extends StatelessWidget {
@@ -66,8 +67,6 @@ class SavingInProgressOverlay extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final isSaving = true;
-
     return IgnorePointer(
       ignoring: !isSaving,
       child: AnimatedContainer(
@@ -120,6 +119,20 @@ class NoteFormPageScaffold extends StatelessWidget {
             },
           )
         ],
+      ),
+      body: Form(
+        child: BlocBuilder<NoteFormBloc, NoteFormState>(
+            buildWhen: (p, c) => p.showErrorMessages != c.showErrorMessages,
+            builder: (context, state) {
+              print('halo');
+              return SingleChildScrollView(
+                child: Column(
+                  children: [
+                    const BodyField(),
+                  ],
+                ),
+              );
+            }),
       ),
     );
   }
