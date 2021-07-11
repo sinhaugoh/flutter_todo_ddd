@@ -9,6 +9,7 @@ part of 'note_form_bloc.dart';
 
 T _$identity<T>(T value) => value;
 
+/// @nodoc
 class _$NoteFormEventTearOff {
   const _$NoteFormEventTearOff();
 
@@ -46,52 +47,56 @@ class _$NoteFormEventTearOff {
   }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $NoteFormEvent = _$NoteFormEventTearOff();
 
+/// @nodoc
 mixin _$NoteFormEvent {
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initialized(Option<Note> initialNoteOption),
-    @required Result bodyChanged(String bodyStr),
-    @required Result colorChanged(Color color),
-    @required Result todosChanged(KtList<TodoItemPrimitive> todos),
-    @required Result saved(),
+  TResult when<TResult extends Object>({
+    @required TResult initialized(Option<Note> initialNoteOption),
+    @required TResult bodyChanged(String bodyStr),
+    @required TResult colorChanged(Color color),
+    @required TResult todosChanged(KtList<TodoItemPrimitive> todos),
+    @required TResult saved(),
   });
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initialized(Option<Note> initialNoteOption),
-    Result bodyChanged(String bodyStr),
-    Result colorChanged(Color color),
-    Result todosChanged(KtList<TodoItemPrimitive> todos),
-    Result saved(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult initialized(Option<Note> initialNoteOption),
+    TResult bodyChanged(String bodyStr),
+    TResult colorChanged(Color color),
+    TResult todosChanged(KtList<TodoItemPrimitive> todos),
+    TResult saved(),
+    @required TResult orElse(),
   });
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initialized(_Initialized value),
-    @required Result bodyChanged(_bodyChanged value),
-    @required Result colorChanged(_ColorChanged value),
-    @required Result todosChanged(_TodoChanged value),
-    @required Result saved(_Saved value),
+  TResult map<TResult extends Object>({
+    @required TResult initialized(_Initialized value),
+    @required TResult bodyChanged(_bodyChanged value),
+    @required TResult colorChanged(_ColorChanged value),
+    @required TResult todosChanged(_TodoChanged value),
+    @required TResult saved(_Saved value),
   });
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initialized(_Initialized value),
-    Result bodyChanged(_bodyChanged value),
-    Result colorChanged(_ColorChanged value),
-    Result todosChanged(_TodoChanged value),
-    Result saved(_Saved value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult initialized(_Initialized value),
+    TResult bodyChanged(_bodyChanged value),
+    TResult colorChanged(_ColorChanged value),
+    TResult todosChanged(_TodoChanged value),
+    TResult saved(_Saved value),
+    @required TResult orElse(),
   });
 }
 
+/// @nodoc
 abstract class $NoteFormEventCopyWith<$Res> {
   factory $NoteFormEventCopyWith(
           NoteFormEvent value, $Res Function(NoteFormEvent) then) =
       _$NoteFormEventCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class _$NoteFormEventCopyWithImpl<$Res>
     implements $NoteFormEventCopyWith<$Res> {
   _$NoteFormEventCopyWithImpl(this._value, this._then);
@@ -101,6 +106,7 @@ class _$NoteFormEventCopyWithImpl<$Res>
   final $Res Function(NoteFormEvent) _then;
 }
 
+/// @nodoc
 abstract class _$InitializedCopyWith<$Res> {
   factory _$InitializedCopyWith(
           _Initialized value, $Res Function(_Initialized) then) =
@@ -108,6 +114,7 @@ abstract class _$InitializedCopyWith<$Res> {
   $Res call({Option<Note> initialNoteOption});
 }
 
+/// @nodoc
 class __$InitializedCopyWithImpl<$Res> extends _$NoteFormEventCopyWithImpl<$Res>
     implements _$InitializedCopyWith<$Res> {
   __$InitializedCopyWithImpl(
@@ -129,6 +136,7 @@ class __$InitializedCopyWithImpl<$Res> extends _$NoteFormEventCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 class _$_Initialized implements _Initialized {
   const _$_Initialized(this.initialNoteOption)
       : assert(initialNoteOption != null);
@@ -155,18 +163,19 @@ class _$_Initialized implements _Initialized {
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(initialNoteOption);
 
+  @JsonKey(ignore: true)
   @override
   _$InitializedCopyWith<_Initialized> get copyWith =>
       __$InitializedCopyWithImpl<_Initialized>(this, _$identity);
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initialized(Option<Note> initialNoteOption),
-    @required Result bodyChanged(String bodyStr),
-    @required Result colorChanged(Color color),
-    @required Result todosChanged(KtList<TodoItemPrimitive> todos),
-    @required Result saved(),
+  TResult when<TResult extends Object>({
+    @required TResult initialized(Option<Note> initialNoteOption),
+    @required TResult bodyChanged(String bodyStr),
+    @required TResult colorChanged(Color color),
+    @required TResult todosChanged(KtList<TodoItemPrimitive> todos),
+    @required TResult saved(),
   }) {
     assert(initialized != null);
     assert(bodyChanged != null);
@@ -178,13 +187,13 @@ class _$_Initialized implements _Initialized {
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initialized(Option<Note> initialNoteOption),
-    Result bodyChanged(String bodyStr),
-    Result colorChanged(Color color),
-    Result todosChanged(KtList<TodoItemPrimitive> todos),
-    Result saved(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult initialized(Option<Note> initialNoteOption),
+    TResult bodyChanged(String bodyStr),
+    TResult colorChanged(Color color),
+    TResult todosChanged(KtList<TodoItemPrimitive> todos),
+    TResult saved(),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (initialized != null) {
@@ -195,12 +204,12 @@ class _$_Initialized implements _Initialized {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initialized(_Initialized value),
-    @required Result bodyChanged(_bodyChanged value),
-    @required Result colorChanged(_ColorChanged value),
-    @required Result todosChanged(_TodoChanged value),
-    @required Result saved(_Saved value),
+  TResult map<TResult extends Object>({
+    @required TResult initialized(_Initialized value),
+    @required TResult bodyChanged(_bodyChanged value),
+    @required TResult colorChanged(_ColorChanged value),
+    @required TResult todosChanged(_TodoChanged value),
+    @required TResult saved(_Saved value),
   }) {
     assert(initialized != null);
     assert(bodyChanged != null);
@@ -212,13 +221,13 @@ class _$_Initialized implements _Initialized {
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initialized(_Initialized value),
-    Result bodyChanged(_bodyChanged value),
-    Result colorChanged(_ColorChanged value),
-    Result todosChanged(_TodoChanged value),
-    Result saved(_Saved value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult initialized(_Initialized value),
+    TResult bodyChanged(_bodyChanged value),
+    TResult colorChanged(_ColorChanged value),
+    TResult todosChanged(_TodoChanged value),
+    TResult saved(_Saved value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (initialized != null) {
@@ -232,9 +241,11 @@ abstract class _Initialized implements NoteFormEvent {
   const factory _Initialized(Option<Note> initialNoteOption) = _$_Initialized;
 
   Option<Note> get initialNoteOption;
+  @JsonKey(ignore: true)
   _$InitializedCopyWith<_Initialized> get copyWith;
 }
 
+/// @nodoc
 abstract class _$bodyChangedCopyWith<$Res> {
   factory _$bodyChangedCopyWith(
           _bodyChanged value, $Res Function(_bodyChanged) then) =
@@ -242,6 +253,7 @@ abstract class _$bodyChangedCopyWith<$Res> {
   $Res call({String bodyStr});
 }
 
+/// @nodoc
 class __$bodyChangedCopyWithImpl<$Res> extends _$NoteFormEventCopyWithImpl<$Res>
     implements _$bodyChangedCopyWith<$Res> {
   __$bodyChangedCopyWithImpl(
@@ -261,6 +273,7 @@ class __$bodyChangedCopyWithImpl<$Res> extends _$NoteFormEventCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 class _$_bodyChanged implements _bodyChanged {
   const _$_bodyChanged(this.bodyStr) : assert(bodyStr != null);
 
@@ -284,18 +297,19 @@ class _$_bodyChanged implements _bodyChanged {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(bodyStr);
 
+  @JsonKey(ignore: true)
   @override
   _$bodyChangedCopyWith<_bodyChanged> get copyWith =>
       __$bodyChangedCopyWithImpl<_bodyChanged>(this, _$identity);
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initialized(Option<Note> initialNoteOption),
-    @required Result bodyChanged(String bodyStr),
-    @required Result colorChanged(Color color),
-    @required Result todosChanged(KtList<TodoItemPrimitive> todos),
-    @required Result saved(),
+  TResult when<TResult extends Object>({
+    @required TResult initialized(Option<Note> initialNoteOption),
+    @required TResult bodyChanged(String bodyStr),
+    @required TResult colorChanged(Color color),
+    @required TResult todosChanged(KtList<TodoItemPrimitive> todos),
+    @required TResult saved(),
   }) {
     assert(initialized != null);
     assert(bodyChanged != null);
@@ -307,13 +321,13 @@ class _$_bodyChanged implements _bodyChanged {
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initialized(Option<Note> initialNoteOption),
-    Result bodyChanged(String bodyStr),
-    Result colorChanged(Color color),
-    Result todosChanged(KtList<TodoItemPrimitive> todos),
-    Result saved(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult initialized(Option<Note> initialNoteOption),
+    TResult bodyChanged(String bodyStr),
+    TResult colorChanged(Color color),
+    TResult todosChanged(KtList<TodoItemPrimitive> todos),
+    TResult saved(),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (bodyChanged != null) {
@@ -324,12 +338,12 @@ class _$_bodyChanged implements _bodyChanged {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initialized(_Initialized value),
-    @required Result bodyChanged(_bodyChanged value),
-    @required Result colorChanged(_ColorChanged value),
-    @required Result todosChanged(_TodoChanged value),
-    @required Result saved(_Saved value),
+  TResult map<TResult extends Object>({
+    @required TResult initialized(_Initialized value),
+    @required TResult bodyChanged(_bodyChanged value),
+    @required TResult colorChanged(_ColorChanged value),
+    @required TResult todosChanged(_TodoChanged value),
+    @required TResult saved(_Saved value),
   }) {
     assert(initialized != null);
     assert(bodyChanged != null);
@@ -341,13 +355,13 @@ class _$_bodyChanged implements _bodyChanged {
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initialized(_Initialized value),
-    Result bodyChanged(_bodyChanged value),
-    Result colorChanged(_ColorChanged value),
-    Result todosChanged(_TodoChanged value),
-    Result saved(_Saved value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult initialized(_Initialized value),
+    TResult bodyChanged(_bodyChanged value),
+    TResult colorChanged(_ColorChanged value),
+    TResult todosChanged(_TodoChanged value),
+    TResult saved(_Saved value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (bodyChanged != null) {
@@ -361,9 +375,11 @@ abstract class _bodyChanged implements NoteFormEvent {
   const factory _bodyChanged(String bodyStr) = _$_bodyChanged;
 
   String get bodyStr;
+  @JsonKey(ignore: true)
   _$bodyChangedCopyWith<_bodyChanged> get copyWith;
 }
 
+/// @nodoc
 abstract class _$ColorChangedCopyWith<$Res> {
   factory _$ColorChangedCopyWith(
           _ColorChanged value, $Res Function(_ColorChanged) then) =
@@ -371,6 +387,7 @@ abstract class _$ColorChangedCopyWith<$Res> {
   $Res call({Color color});
 }
 
+/// @nodoc
 class __$ColorChangedCopyWithImpl<$Res>
     extends _$NoteFormEventCopyWithImpl<$Res>
     implements _$ColorChangedCopyWith<$Res> {
@@ -391,6 +408,7 @@ class __$ColorChangedCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 class _$_ColorChanged implements _ColorChanged {
   const _$_ColorChanged(this.color) : assert(color != null);
 
@@ -414,18 +432,19 @@ class _$_ColorChanged implements _ColorChanged {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(color);
 
+  @JsonKey(ignore: true)
   @override
   _$ColorChangedCopyWith<_ColorChanged> get copyWith =>
       __$ColorChangedCopyWithImpl<_ColorChanged>(this, _$identity);
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initialized(Option<Note> initialNoteOption),
-    @required Result bodyChanged(String bodyStr),
-    @required Result colorChanged(Color color),
-    @required Result todosChanged(KtList<TodoItemPrimitive> todos),
-    @required Result saved(),
+  TResult when<TResult extends Object>({
+    @required TResult initialized(Option<Note> initialNoteOption),
+    @required TResult bodyChanged(String bodyStr),
+    @required TResult colorChanged(Color color),
+    @required TResult todosChanged(KtList<TodoItemPrimitive> todos),
+    @required TResult saved(),
   }) {
     assert(initialized != null);
     assert(bodyChanged != null);
@@ -437,13 +456,13 @@ class _$_ColorChanged implements _ColorChanged {
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initialized(Option<Note> initialNoteOption),
-    Result bodyChanged(String bodyStr),
-    Result colorChanged(Color color),
-    Result todosChanged(KtList<TodoItemPrimitive> todos),
-    Result saved(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult initialized(Option<Note> initialNoteOption),
+    TResult bodyChanged(String bodyStr),
+    TResult colorChanged(Color color),
+    TResult todosChanged(KtList<TodoItemPrimitive> todos),
+    TResult saved(),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (colorChanged != null) {
@@ -454,12 +473,12 @@ class _$_ColorChanged implements _ColorChanged {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initialized(_Initialized value),
-    @required Result bodyChanged(_bodyChanged value),
-    @required Result colorChanged(_ColorChanged value),
-    @required Result todosChanged(_TodoChanged value),
-    @required Result saved(_Saved value),
+  TResult map<TResult extends Object>({
+    @required TResult initialized(_Initialized value),
+    @required TResult bodyChanged(_bodyChanged value),
+    @required TResult colorChanged(_ColorChanged value),
+    @required TResult todosChanged(_TodoChanged value),
+    @required TResult saved(_Saved value),
   }) {
     assert(initialized != null);
     assert(bodyChanged != null);
@@ -471,13 +490,13 @@ class _$_ColorChanged implements _ColorChanged {
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initialized(_Initialized value),
-    Result bodyChanged(_bodyChanged value),
-    Result colorChanged(_ColorChanged value),
-    Result todosChanged(_TodoChanged value),
-    Result saved(_Saved value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult initialized(_Initialized value),
+    TResult bodyChanged(_bodyChanged value),
+    TResult colorChanged(_ColorChanged value),
+    TResult todosChanged(_TodoChanged value),
+    TResult saved(_Saved value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (colorChanged != null) {
@@ -491,9 +510,11 @@ abstract class _ColorChanged implements NoteFormEvent {
   const factory _ColorChanged(Color color) = _$_ColorChanged;
 
   Color get color;
+  @JsonKey(ignore: true)
   _$ColorChangedCopyWith<_ColorChanged> get copyWith;
 }
 
+/// @nodoc
 abstract class _$TodoChangedCopyWith<$Res> {
   factory _$TodoChangedCopyWith(
           _TodoChanged value, $Res Function(_TodoChanged) then) =
@@ -501,6 +522,7 @@ abstract class _$TodoChangedCopyWith<$Res> {
   $Res call({KtList<TodoItemPrimitive> todos});
 }
 
+/// @nodoc
 class __$TodoChangedCopyWithImpl<$Res> extends _$NoteFormEventCopyWithImpl<$Res>
     implements _$TodoChangedCopyWith<$Res> {
   __$TodoChangedCopyWithImpl(
@@ -520,6 +542,7 @@ class __$TodoChangedCopyWithImpl<$Res> extends _$NoteFormEventCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 class _$_TodoChanged implements _TodoChanged {
   const _$_TodoChanged(this.todos) : assert(todos != null);
 
@@ -543,18 +566,19 @@ class _$_TodoChanged implements _TodoChanged {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(todos);
 
+  @JsonKey(ignore: true)
   @override
   _$TodoChangedCopyWith<_TodoChanged> get copyWith =>
       __$TodoChangedCopyWithImpl<_TodoChanged>(this, _$identity);
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initialized(Option<Note> initialNoteOption),
-    @required Result bodyChanged(String bodyStr),
-    @required Result colorChanged(Color color),
-    @required Result todosChanged(KtList<TodoItemPrimitive> todos),
-    @required Result saved(),
+  TResult when<TResult extends Object>({
+    @required TResult initialized(Option<Note> initialNoteOption),
+    @required TResult bodyChanged(String bodyStr),
+    @required TResult colorChanged(Color color),
+    @required TResult todosChanged(KtList<TodoItemPrimitive> todos),
+    @required TResult saved(),
   }) {
     assert(initialized != null);
     assert(bodyChanged != null);
@@ -566,13 +590,13 @@ class _$_TodoChanged implements _TodoChanged {
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initialized(Option<Note> initialNoteOption),
-    Result bodyChanged(String bodyStr),
-    Result colorChanged(Color color),
-    Result todosChanged(KtList<TodoItemPrimitive> todos),
-    Result saved(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult initialized(Option<Note> initialNoteOption),
+    TResult bodyChanged(String bodyStr),
+    TResult colorChanged(Color color),
+    TResult todosChanged(KtList<TodoItemPrimitive> todos),
+    TResult saved(),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (todosChanged != null) {
@@ -583,12 +607,12 @@ class _$_TodoChanged implements _TodoChanged {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initialized(_Initialized value),
-    @required Result bodyChanged(_bodyChanged value),
-    @required Result colorChanged(_ColorChanged value),
-    @required Result todosChanged(_TodoChanged value),
-    @required Result saved(_Saved value),
+  TResult map<TResult extends Object>({
+    @required TResult initialized(_Initialized value),
+    @required TResult bodyChanged(_bodyChanged value),
+    @required TResult colorChanged(_ColorChanged value),
+    @required TResult todosChanged(_TodoChanged value),
+    @required TResult saved(_Saved value),
   }) {
     assert(initialized != null);
     assert(bodyChanged != null);
@@ -600,13 +624,13 @@ class _$_TodoChanged implements _TodoChanged {
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initialized(_Initialized value),
-    Result bodyChanged(_bodyChanged value),
-    Result colorChanged(_ColorChanged value),
-    Result todosChanged(_TodoChanged value),
-    Result saved(_Saved value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult initialized(_Initialized value),
+    TResult bodyChanged(_bodyChanged value),
+    TResult colorChanged(_ColorChanged value),
+    TResult todosChanged(_TodoChanged value),
+    TResult saved(_Saved value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (todosChanged != null) {
@@ -620,14 +644,17 @@ abstract class _TodoChanged implements NoteFormEvent {
   const factory _TodoChanged(KtList<TodoItemPrimitive> todos) = _$_TodoChanged;
 
   KtList<TodoItemPrimitive> get todos;
+  @JsonKey(ignore: true)
   _$TodoChangedCopyWith<_TodoChanged> get copyWith;
 }
 
+/// @nodoc
 abstract class _$SavedCopyWith<$Res> {
   factory _$SavedCopyWith(_Saved value, $Res Function(_Saved) then) =
       __$SavedCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class __$SavedCopyWithImpl<$Res> extends _$NoteFormEventCopyWithImpl<$Res>
     implements _$SavedCopyWith<$Res> {
   __$SavedCopyWithImpl(_Saved _value, $Res Function(_Saved) _then)
@@ -637,6 +664,7 @@ class __$SavedCopyWithImpl<$Res> extends _$NoteFormEventCopyWithImpl<$Res>
   _Saved get _value => super._value as _Saved;
 }
 
+/// @nodoc
 class _$_Saved implements _Saved {
   const _$_Saved();
 
@@ -655,12 +683,12 @@ class _$_Saved implements _Saved {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initialized(Option<Note> initialNoteOption),
-    @required Result bodyChanged(String bodyStr),
-    @required Result colorChanged(Color color),
-    @required Result todosChanged(KtList<TodoItemPrimitive> todos),
-    @required Result saved(),
+  TResult when<TResult extends Object>({
+    @required TResult initialized(Option<Note> initialNoteOption),
+    @required TResult bodyChanged(String bodyStr),
+    @required TResult colorChanged(Color color),
+    @required TResult todosChanged(KtList<TodoItemPrimitive> todos),
+    @required TResult saved(),
   }) {
     assert(initialized != null);
     assert(bodyChanged != null);
@@ -672,13 +700,13 @@ class _$_Saved implements _Saved {
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initialized(Option<Note> initialNoteOption),
-    Result bodyChanged(String bodyStr),
-    Result colorChanged(Color color),
-    Result todosChanged(KtList<TodoItemPrimitive> todos),
-    Result saved(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult initialized(Option<Note> initialNoteOption),
+    TResult bodyChanged(String bodyStr),
+    TResult colorChanged(Color color),
+    TResult todosChanged(KtList<TodoItemPrimitive> todos),
+    TResult saved(),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (saved != null) {
@@ -689,12 +717,12 @@ class _$_Saved implements _Saved {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initialized(_Initialized value),
-    @required Result bodyChanged(_bodyChanged value),
-    @required Result colorChanged(_ColorChanged value),
-    @required Result todosChanged(_TodoChanged value),
-    @required Result saved(_Saved value),
+  TResult map<TResult extends Object>({
+    @required TResult initialized(_Initialized value),
+    @required TResult bodyChanged(_bodyChanged value),
+    @required TResult colorChanged(_ColorChanged value),
+    @required TResult todosChanged(_TodoChanged value),
+    @required TResult saved(_Saved value),
   }) {
     assert(initialized != null);
     assert(bodyChanged != null);
@@ -706,13 +734,13 @@ class _$_Saved implements _Saved {
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initialized(_Initialized value),
-    Result bodyChanged(_bodyChanged value),
-    Result colorChanged(_ColorChanged value),
-    Result todosChanged(_TodoChanged value),
-    Result saved(_Saved value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult initialized(_Initialized value),
+    TResult bodyChanged(_bodyChanged value),
+    TResult colorChanged(_ColorChanged value),
+    TResult todosChanged(_TodoChanged value),
+    TResult saved(_Saved value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (saved != null) {
@@ -726,6 +754,7 @@ abstract class _Saved implements NoteFormEvent {
   const factory _Saved() = _$_Saved;
 }
 
+/// @nodoc
 class _$NoteFormStateTearOff {
   const _$NoteFormStateTearOff();
 
@@ -746,9 +775,11 @@ class _$NoteFormStateTearOff {
   }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $NoteFormState = _$NoteFormStateTearOff();
 
+/// @nodoc
 mixin _$NoteFormState {
   Note get note;
   bool get showErrorMessages;
@@ -756,9 +787,11 @@ mixin _$NoteFormState {
   bool get isEditing;
   Option<Either<NoteFailure, Unit>> get saveFailureOrSuccessOption;
 
+  @JsonKey(ignore: true)
   $NoteFormStateCopyWith<NoteFormState> get copyWith;
 }
 
+/// @nodoc
 abstract class $NoteFormStateCopyWith<$Res> {
   factory $NoteFormStateCopyWith(
           NoteFormState value, $Res Function(NoteFormState) then) =
@@ -773,6 +806,7 @@ abstract class $NoteFormStateCopyWith<$Res> {
   $NoteCopyWith<$Res> get note;
 }
 
+/// @nodoc
 class _$NoteFormStateCopyWithImpl<$Res>
     implements $NoteFormStateCopyWith<$Res> {
   _$NoteFormStateCopyWithImpl(this._value, this._then);
@@ -813,6 +847,7 @@ class _$NoteFormStateCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$NoteFormStateCopyWith<$Res>
     implements $NoteFormStateCopyWith<$Res> {
   factory _$NoteFormStateCopyWith(
@@ -830,6 +865,7 @@ abstract class _$NoteFormStateCopyWith<$Res>
   $NoteCopyWith<$Res> get note;
 }
 
+/// @nodoc
 class __$NoteFormStateCopyWithImpl<$Res>
     extends _$NoteFormStateCopyWithImpl<$Res>
     implements _$NoteFormStateCopyWith<$Res> {
@@ -862,6 +898,7 @@ class __$NoteFormStateCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 class _$_NoteFormState implements _NoteFormState {
   const _$_NoteFormState(
       {@required this.note,
@@ -922,6 +959,7 @@ class _$_NoteFormState implements _NoteFormState {
       const DeepCollectionEquality().hash(isEditing) ^
       const DeepCollectionEquality().hash(saveFailureOrSuccessOption);
 
+  @JsonKey(ignore: true)
   @override
   _$NoteFormStateCopyWith<_NoteFormState> get copyWith =>
       __$NoteFormStateCopyWithImpl<_NoteFormState>(this, _$identity);
@@ -952,5 +990,6 @@ abstract class _NoteFormState implements NoteFormState {
   @override
   Option<Either<NoteFailure, Unit>> get saveFailureOrSuccessOption;
   @override
+  @JsonKey(ignore: true)
   _$NoteFormStateCopyWith<_NoteFormState> get copyWith;
 }

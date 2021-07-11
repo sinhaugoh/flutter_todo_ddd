@@ -12,6 +12,7 @@ NoteDto _$NoteDtoFromJson(Map<String, dynamic> json) {
   return _NoteDto.fromJson(json);
 }
 
+/// @nodoc
 class _$NoteDtoTearOff {
   const _$NoteDtoTearOff();
 
@@ -30,11 +31,18 @@ class _$NoteDtoTearOff {
       serverTimestamp: serverTimestamp,
     );
   }
+
+// ignore: unused_element
+  NoteDto fromJson(Map<String, Object> json) {
+    return NoteDto.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $NoteDto = _$NoteDtoTearOff();
 
+/// @nodoc
 mixin _$NoteDto {
   @JsonKey(ignore: true)
   String get id;
@@ -45,9 +53,11 @@ mixin _$NoteDto {
   FieldValue get serverTimestamp;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $NoteDtoCopyWith<NoteDto> get copyWith;
 }
 
+/// @nodoc
 abstract class $NoteDtoCopyWith<$Res> {
   factory $NoteDtoCopyWith(NoteDto value, $Res Function(NoteDto) then) =
       _$NoteDtoCopyWithImpl<$Res>;
@@ -59,6 +69,7 @@ abstract class $NoteDtoCopyWith<$Res> {
       @ServerTimestampConverter() FieldValue serverTimestamp});
 }
 
+/// @nodoc
 class _$NoteDtoCopyWithImpl<$Res> implements $NoteDtoCopyWith<$Res> {
   _$NoteDtoCopyWithImpl(this._value, this._then);
 
@@ -86,6 +97,7 @@ class _$NoteDtoCopyWithImpl<$Res> implements $NoteDtoCopyWith<$Res> {
   }
 }
 
+/// @nodoc
 abstract class _$NoteDtoCopyWith<$Res> implements $NoteDtoCopyWith<$Res> {
   factory _$NoteDtoCopyWith(_NoteDto value, $Res Function(_NoteDto) then) =
       __$NoteDtoCopyWithImpl<$Res>;
@@ -98,6 +110,7 @@ abstract class _$NoteDtoCopyWith<$Res> implements $NoteDtoCopyWith<$Res> {
       @ServerTimestampConverter() FieldValue serverTimestamp});
 }
 
+/// @nodoc
 class __$NoteDtoCopyWithImpl<$Res> extends _$NoteDtoCopyWithImpl<$Res>
     implements _$NoteDtoCopyWith<$Res> {
   __$NoteDtoCopyWithImpl(_NoteDto _value, $Res Function(_NoteDto) _then)
@@ -127,6 +140,8 @@ class __$NoteDtoCopyWithImpl<$Res> extends _$NoteDtoCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_NoteDto extends _NoteDto with DiagnosticableTreeMixin {
   const _$_NoteDto(
       {@JsonKey(ignore: true) this.id,
@@ -199,6 +214,7 @@ class _$_NoteDto extends _NoteDto with DiagnosticableTreeMixin {
       const DeepCollectionEquality().hash(todos) ^
       const DeepCollectionEquality().hash(serverTimestamp);
 
+  @JsonKey(ignore: true)
   @override
   _$NoteDtoCopyWith<_NoteDto> get copyWith =>
       __$NoteDtoCopyWithImpl<_NoteDto>(this, _$identity);
@@ -234,6 +250,7 @@ abstract class _NoteDto extends NoteDto {
   @ServerTimestampConverter()
   FieldValue get serverTimestamp;
   @override
+  @JsonKey(ignore: true)
   _$NoteDtoCopyWith<_NoteDto> get copyWith;
 }
 
@@ -241,6 +258,7 @@ TodoItemDto _$TodoItemDtoFromJson(Map<String, dynamic> json) {
   return _TodoItemDto.fromJson(json);
 }
 
+/// @nodoc
 class _$TodoItemDtoTearOff {
   const _$TodoItemDtoTearOff();
 
@@ -253,20 +271,29 @@ class _$TodoItemDtoTearOff {
       done: done,
     );
   }
+
+// ignore: unused_element
+  TodoItemDto fromJson(Map<String, Object> json) {
+    return TodoItemDto.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $TodoItemDto = _$TodoItemDtoTearOff();
 
+/// @nodoc
 mixin _$TodoItemDto {
   String get id;
   String get name;
   bool get done;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $TodoItemDtoCopyWith<TodoItemDto> get copyWith;
 }
 
+/// @nodoc
 abstract class $TodoItemDtoCopyWith<$Res> {
   factory $TodoItemDtoCopyWith(
           TodoItemDto value, $Res Function(TodoItemDto) then) =
@@ -274,6 +301,7 @@ abstract class $TodoItemDtoCopyWith<$Res> {
   $Res call({String id, String name, bool done});
 }
 
+/// @nodoc
 class _$TodoItemDtoCopyWithImpl<$Res> implements $TodoItemDtoCopyWith<$Res> {
   _$TodoItemDtoCopyWithImpl(this._value, this._then);
 
@@ -295,6 +323,7 @@ class _$TodoItemDtoCopyWithImpl<$Res> implements $TodoItemDtoCopyWith<$Res> {
   }
 }
 
+/// @nodoc
 abstract class _$TodoItemDtoCopyWith<$Res>
     implements $TodoItemDtoCopyWith<$Res> {
   factory _$TodoItemDtoCopyWith(
@@ -304,6 +333,7 @@ abstract class _$TodoItemDtoCopyWith<$Res>
   $Res call({String id, String name, bool done});
 }
 
+/// @nodoc
 class __$TodoItemDtoCopyWithImpl<$Res> extends _$TodoItemDtoCopyWithImpl<$Res>
     implements _$TodoItemDtoCopyWith<$Res> {
   __$TodoItemDtoCopyWithImpl(
@@ -328,6 +358,8 @@ class __$TodoItemDtoCopyWithImpl<$Res> extends _$TodoItemDtoCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_TodoItemDto extends _TodoItemDto with DiagnosticableTreeMixin {
   const _$_TodoItemDto(
       {@required this.id, @required this.name, @required this.done})
@@ -380,6 +412,7 @@ class _$_TodoItemDto extends _TodoItemDto with DiagnosticableTreeMixin {
       const DeepCollectionEquality().hash(name) ^
       const DeepCollectionEquality().hash(done);
 
+  @JsonKey(ignore: true)
   @override
   _$TodoItemDtoCopyWith<_TodoItemDto> get copyWith =>
       __$TodoItemDtoCopyWithImpl<_TodoItemDto>(this, _$identity);
@@ -407,5 +440,6 @@ abstract class _TodoItemDto extends TodoItemDto {
   @override
   bool get done;
   @override
+  @JsonKey(ignore: true)
   _$TodoItemDtoCopyWith<_TodoItemDto> get copyWith;
 }

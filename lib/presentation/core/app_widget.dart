@@ -25,7 +25,7 @@ class AppWidget extends StatelessWidget {
           ),
         ),
         debugShowCheckedModeBanner: false,
-        builder: ExtendedNavigator(router: Routerr(),),
+        builder: ExtendedNavigator.builder(router: Routerr(),),
       ),
     );
   }
